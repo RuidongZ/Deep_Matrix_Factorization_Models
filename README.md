@@ -16,6 +16,6 @@ The instruction of commands has been clearly stated in the codes.
 python Model.py
 ```
 ## Postscript
-As a learner, there may have some frauds in the code.
+As a learner, there may have some faults in the code.
 
 Please feel **FREE** to advise.
