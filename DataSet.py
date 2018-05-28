@@ -103,10 +103,13 @@ class DataSet(object):
             i = s[1]
             tmp_user.append(u)
             tmp_item.append(i)
+            neglist = set()
+            neglist.add(i)
             for t in range(negNum):
                 j = np.random.randint(self.shape[1])
-                while (u, j) in self.trainDict:
+                while (u, j) in self.trainDict or j in neglist:
                     j = np.random.randint(self.shape[1])
+                neglist.add(j)
                 tmp_user.append(u)
                 tmp_item.append(j)
             user.append(tmp_user)
